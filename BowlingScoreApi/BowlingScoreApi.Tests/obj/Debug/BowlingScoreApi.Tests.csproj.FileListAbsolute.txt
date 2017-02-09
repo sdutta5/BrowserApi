@@ -1,0 +1,15 @@
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\BowlingScoreApi.Tests.dll
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\BowlingScoreApi.Tests.pdb
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\BowlingScoreApi.dll
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\System.Web.Http.dll
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\BowlingScoreApi.pdb
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\System.Web.Http.xml
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\obj\Debug\BowlingScoreApi.Tests.csprojResolveAssemblyReference.cache
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\obj\Debug\BowlingScoreApi.Tests.dll
+D:\Bowling\BowlingScoreApi\BowlingScoreApi.Tests\obj\Debug\BowlingScoreApi.Tests.pdb

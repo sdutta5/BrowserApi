@@ -1,0 +1,42 @@
+﻿@model BowlingScoreboard.Models.HomeModel
+
+@{
+    var appJsonConfig = "{\"labels\": " +
+                                     "{\"addframebuttontext\": \"" + Model.AddFrameButtonText + "\"}}";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.PageTitleText</title>
+    <link rel="stylesheet" href="~/content/styles.css">
+</head>
+<body ng-app="BowlingScoreboard.Website" class="body-container">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <div class="outer-container">
+        <h1 class="heading">@Model.PageHeadingLabelText</h1>
+        <input type="button" class="button start" ng-click="startNewGame()" value="@Model.StartNewGameButtonText" />
+        <div class="parent-container" json-app-config='@appJsonConfig'>
+            <input type="button" id="add-frame" class="button addframe" ng-click="addFrameRowToScoreTable()" ng-show="showAddFrame" ng-disabled="disableAddFrame" value="@Model.AddFrameButtonText " />
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>@Model.FrameNumberHeadingText</th>
+                        <th>@Model.FirstRollLabelText</th>
+                        <th>@Model.SecondRollLabelText</th>
+                        <th>@Model.BonusRollLabelText</th>
+                        <th>@Model.FrameScoreLabelText</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body"></tbody>
+            </table>
+            <div class="error-message" ng-show="errorVisible"></div>
+            <div class="calculate-total-score button start" ng-click="showResult()" ng-show="showCalculateButton">@Model.TotalScoreLabelText</div>
+            <div class="total-score" ng-show="showCalculateButton">@Model.TotalScoreText {{finalScore}}</div>
+        </div>        
+    </div>
+</body>
+</html>
