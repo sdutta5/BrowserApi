@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScoreApi", "BowlingScoreApi\BowlingScoreApi.csproj", "{75331E4A-C920-494A-95BB-995A3A7CC355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingScoreApi.Tests", "BowlingScoreApi.Tests\BowlingScoreApi.Tests.csproj", "{B492624F-D049-42A5-ABF9-A66E14E22867}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75331E4A-C920-494A-95BB-995A3A7CC355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75331E4A-C920-494A-95BB-995A3A7CC355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75331E4A-C920-494A-95BB-995A3A7CC355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75331E4A-C920-494A-95BB-995A3A7CC355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B492624F-D049-42A5-ABF9-A66E14E22867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B492624F-D049-42A5-ABF9-A66E14E22867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B492624F-D049-42A5-ABF9-A66E14E22867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B492624F-D049-42A5-ABF9-A66E14E22867}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
