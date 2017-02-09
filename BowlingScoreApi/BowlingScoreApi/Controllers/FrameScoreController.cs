@@ -24,14 +24,14 @@ namespace BowlingScoreApi.Controllers
         }
         // GET api/framescore/5
         /// <summary>
-        /// 
+        /// REST API GET METHOD FOR ACCESSIBILITY
         /// </summary>
-        /// <param name="firstrollpins"></param>
-        /// <param name="secondrollpins"></param>
-        /// <param name="thirdrollpins"></param>
-        /// <param name="strike"></param>
-        /// <param name="spare"></param>
-        /// <param name="totalscore"></param>
+        /// <param name="firstrollpins">Pins down in first roll in a frame</param>
+        /// <param name="secondrollpins">Pins down in second roll in a frame</param>
+        /// <param name="thirdrollpins">Pins down in third roll in a frame</param>
+        /// <param name="strike">specifies whether the last frame was strike</param>
+        /// <param name="spare">specifies whether the last frame was spare</param>
+        /// <param name="totalscore">specifies the total score of all the frames</param>
         /// <returns></returns>
         public string Get(string firstrollpins,
             string secondrollpins,

@@ -2,7 +2,7 @@
 namespace BowlingScoreApi.Services
 {
     /// <summary>
-    /// 
+    /// Service interface for the score calculation
     /// </summary>
     public interface IScoreService
     {

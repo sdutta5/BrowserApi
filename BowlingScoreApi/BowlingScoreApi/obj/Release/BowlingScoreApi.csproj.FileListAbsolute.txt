@@ -11,3 +11,17 @@ D:\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Web.Http.xml
 D:\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Web.Http.WebHost.xml
 D:\Bowling\BowlingScoreApi\BowlingScoreApi\obj\Release\BowlingScoreApi.dll
 D:\Bowling\BowlingScoreApi\BowlingScoreApi\obj\Release\BowlingScoreApi.pdb
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\BowlingScoreApi.dll.config
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\BowlingScoreApi.dll
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\BowlingScoreApi.pdb
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\Newtonsoft.Json.dll
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Net.Http.Formatting.dll
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Web.Http.dll
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Web.Http.WebHost.dll
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\Newtonsoft.Json.xml
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Net.Http.Formatting.xml
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Web.Http.xml
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\bin\System.Web.Http.WebHost.xml
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\obj\Release\BowlingScoreApi.csprojResolveAssemblyReference.cache
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\obj\Release\BowlingScoreApi.dll
+D:\Bowling\Bowling\BowlingScoreApi\BowlingScoreApi\obj\Release\BowlingScoreApi.pdb
