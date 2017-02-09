@@ -7,7 +7,7 @@
         this.SrNo = srno;
         this.FirstRoll = roll1;
         this.SecondRoll = roll2;
-        this.ThirdRoll = roll3;        
+        this.ThirdRoll = roll3;
         this.Strike = strike;
         this.Spare = spare;
         this.TotalScore = totalscore;
@@ -32,6 +32,9 @@
                 var frameCount = 0;
                 var tbody = angular.element(element)[0].querySelector('.table-body');
 
+                /*
+                Add new frames in the table
+                */
                 scope.addFrameRowToScoreTable = function () {
                     scope.disableAddFrame = true;
                     if (frameCount < 10) {
@@ -40,7 +43,7 @@
                             fullhtml.cells[0].innerHTML = '<div class="frame-number">' + frameCount + '</div>';
                             if (frameCount <= 9) {
                                 fullhtml.cells[3].innerHTML = '';
-                            }                            
+                            }
                             angular.element(tbody).append($compile(fullhtml)(scope));
                         });
                         frameCount += 1;
@@ -51,6 +54,9 @@
                     }
                 };
 
+                /*
+                initiate the reading of values from DOM elements
+                */
                 scope.readAndProcessScore = function () {
                     var button = angular.element(event.target)[0];
                     readScoreFromFields(button);
@@ -83,9 +89,9 @@
                     if (typeof roll3 !== "undefined" && roll3 !== null && roll1value + roll2value >= 10) {
                         roll3value = parseInt(roll3.value);
                     }
-
-                    var scoreServiceUrl = "http://localhost:59595/api/framescore?firstrollpins="
-                        + roll1value
+                    //"http://bowlingapi.azurewebsites.net/api/framescore"
+                    var scoreServiceUrl = "http://localhost:59595/api/framescore"
+                        + "?firstrollpins=" + roll1value
                         + "&secondrollpins=" + roll2value
                         + "&thirdrollpins=" + roll3value
                         + "&totalscore=" + ((scope.frames.length > 0) ? scope.frames[scope.frames.length - 1].TotalScore.toString() : "0")
@@ -105,35 +111,43 @@
                             scope.Spare,
                             jsonResponse.TotalScore);
 
-                        button.parentElement.parentElement.cells[4].innerHTML = frameScore.TotalScore;
-                        if (scope.frames.length > 0) {
-                            if (scope.frames[scope.frames.length - 1].Strike === true || scope.frames[scope.frames.length - 1].Spare === true) {
-                                var previousFrame = button.parentElement.parentElement.previousSibling;
-                                if (previousFrame !== null) {
-                                    previousFrame.cells[4].innerHTML = frameScore.TotalScore - roll1value - roll2value;
-                                }
-                            }
-                        }
-                        if (scope.frames.length > 1) {
-                            if (scope.frames[scope.frames.length - 2].Strike === true || scope.frames[scope.frames.length - 2].Spare === true) {
-                                var prevToPrevFrame = button.parentElement.parentElement.previousSibling.previousSibling;
-                                if (prevToPrevFrame !== null) {
-                                    prevToPrevFrame.cells[4].innerHTML = (frameScore.TotalScore - roll1value - roll2value) - roll1value - roll2value - 10;
-                                }
-                            }
-                        }
-                                                
+                        updateTotalScoreColumn(button, frameScore, roll1value, roll2value, roll3value);
                         scope.frames.push(frameScore);
                         scope.disableAddFrame = false;
                         scope.Strike = false;
                         scope.Spare = false;
 
                         replaceDropdowns(roll1, roll2, roll3);
+                        
 
                         if (frameCount === 10) {
                             scope.showCalculateButton = true;
                         }
                     });
+                };
+
+                /*
+               update the total score column for the current row, previous row and previous to previous row
+               */
+                var updateTotalScoreColumn = function (button, frameScore, roll1value, roll2value, roll3value) {
+                    button.parentElement.parentElement.cells[4].innerHTML = frameScore.TotalScore;                    
+                    if (scope.frames.length > 0) {
+                        var previousFrameValue = frameScore.TotalScore - roll1value - roll2value - roll3value;
+                        if (scope.frames[scope.frames.length - 1].Strike === true || scope.frames[scope.frames.length - 1].Spare === true) {
+                            var previousFrame = button.parentElement.parentElement.previousSibling;
+                            if (previousFrame !== null) {
+                                previousFrame.cells[4].innerHTML = previousFrameValue;
+                            }
+                        }
+                    }
+                    //if (scope.frames.length > 1) {
+                    //    if (scope.frames[scope.frames.length - 2].Strike === true || scope.frames[scope.frames.length - 2].Spare === true) {
+                    //        var prevToPrevFrame = button.parentElement.parentElement.previousSibling.previousSibling;
+                    //        if (prevToPrevFrame !== null) {
+                    //            prevToPrevFrame.cells[4].innerHTML = (previousFrameValue) - roll1value - roll2value - roll3value - 10;
+                    //        }
+                    //    }
+                    //}
                 };
 
                 /*
@@ -150,7 +164,7 @@
                         button.disabled = true;
                     }
 
-                    if (roll1value !== 10 && roll2value !== 10 && ((roll1value + roll2value) === 10)) {
+                    if (roll1value !== 10 && ((roll1value + roll2value) === 10)) {
                         scope.Spare = true;
                     }
                     if (roll1value === 10) {
